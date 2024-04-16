@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Insurance Inquiry</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Insurance Solutions</h1>
+    </header>
+    <main>
+        <section id="about">
+            <h2>Apex Agency</h2>
+            <p>American Income Life offers supplemental life, health, and accident insurance to union members, credit unions, associations, and their families. The Apex Agency, based in Ohio, represents American Income Life products through its independent agents. Our experienced team of insurance representatives can help you determine what kind of life insurance is most suitable and cost-effective for your family’s needs. The Apex Agency can also explain the supplemental life, health and accident benefits included with American Income Life’s products. Contact us today to learn more about AIL’s insurance products.</p>
+        </section>
+        <section id="products">
+            <h2>Available Products</h2>
+            <ul>
+                <li>Union Coverage</li>
+                <li>Accident & Hospital Insurance</li>
+                <li>Family Protection</li>
+                <li>Life Insurance</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <form id="inquiryForm" method="post" action="/submit-form">
+                <label for="firstName">Your Name*</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First" required>
+                <input type="text" id="lastName" name="lastName" placeholder="Last" required>
+    
+                <label for="telephone">Telephone*</label>
+                <input type="tel" id="telephone" name="telephone" required>
+    
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label>Reason for Contact</label>
+                <div>
+                    <input type="checkbox" id="general" name="reasonForContact" value="General">
+                    <label for="general">General</label>
+    
+                    <input type="checkbox" id="career" name="reasonForContact" value="Career">
+                    <label for="career">Career</label>
+    
+                    <input type="checkbox" id="policy" name="reasonForContact" value="Policy" onchange="addPolicyFields()">
+                    <label for="policy">Policy</label>
+                </div>
+    
+                <div id="policyFields"></div> <!-- Placeholder for additional fields -->
+    
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <div class="g-recaptcha" data-sitekey="6LekCbspAAAAAMAcNojlqvYl0_cDnqOuknWUzHBv"></div> <!-- CAPTCHA Placeholder -->
+    
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p> Copyright &copy; American Life Insurance Company. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LekCbspAAAAAMAcNojlqvYl0_cDnqOuknWUzHBv"></script>
+
+    <script>
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.enterprise.ready(async () => {
+            const token = await grecaptcha.execute('6LekCbspAAAAAMAcNojlqvYl0_cDnqOuknWUzHBv', {action: 'SUBMIT'}).then(function(token){});
+          });
+        }
+      </script>
+
+</body>
+</html>
