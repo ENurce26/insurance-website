@@ -9,23 +9,48 @@
 </head>
 <body>
     <header>
+        <img src="https://ailla.com/wp-content/uploads/2016/05/logo.gif" alt="Company Logo" id="logo">
         <h1>Welcome to Your Insurance Solutions</h1>
     </header>
     <main>
         <section id="about">
-            <h2>Apex Agency</h2>
-            <p>American Income Life offers supplemental life, health, and accident insurance to union members, credit unions, associations, and their families. The Apex Agency, based in Ohio, represents American Income Life products through its independent agents. Our experienced team of insurance representatives can help you determine what kind of life insurance is most suitable and cost-effective for your family’s needs. The Apex Agency can also explain the supplemental life, health and accident benefits included with American Income Life’s products. Contact us today to learn more about AIL’s insurance products.</p>
+            <div class="about-content">
+                <img src="https://ailla.com/wp-content/uploads/2016/05/saleteam.jpg" alt="Team Image">
+                <div class="about-text">
+                    <h2>Representing American Income Life</h2>
+                    <p>American Income Life offers supplemental life, health, and accident insurance to union members, credit unions, associations, and their families. The Apex Agency, based in Ohio, represents American Income Life products through its independent agents. Our experienced team of insurance representatives can help you determine what kind of life insurance is most suitable and cost-effective for your family’s needs. The Apex Agency can also explain the supplemental life, health and accident benefits included with American Income Life’s products. Contact us today to learn more about AIL’s insurance products.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Available Products</h2>
         </section>
         <section id="products">
-            <h2>Available Products</h2>
-            <ul>
-                <li>Union Coverage</li>
-                <li>Accident & Hospital Insurance</li>
-                <li>Family Protection</li>
-                <li>Life Insurance</li>
-            </ul>
+            <div class="product">
+                <img src="https://ailla.com/wp-content/uploads/2016/05/construction-man-1.jpg" alt="Union Coverage">
+                <h3>Union Coverage</h3>
+                <p>American Income Life specializes in servicing the insurance needs of union brothers and sisters. From the beginning, American Income Life has operated in the spirit of “Be Union – Buy Union.” Wherever and whenever there is an opportunity to further the cause of labor, American Income Life is the first in line. </p>
+            </div>
+            <div class="product">
+                <img src="https://ailla.com/wp-content/uploads/2018/11/ailla_insurance_accident_77811760.jpg" alt="Accident & Hospital Insurance">
+                <h3>Accident & Hospital Insurance</h3>
+                <p>An accident can happen to anyone … at any time … and in any place. An unforeseen illness can result in hospital confinement or intensive care treatment. American Income Life’s supplemental accident and health insurance policies can help cover the financial burden in the case of an accident or illness. You can’t foresee when an accident may happen. But you can be prepared if it does. </p>
+            </div>
+            <div class="product">
+                <img src="https://ailla.com/wp-content/uploads/2016/05/family-page-2.jpg" alt="Family Protection">
+                <h3>Family Protection</h3>
+                <p>Your family is important, so why wouldn’t you take every opportunity to protect them? View American Income Life’s products specifically designed to provide insurance coverage for your family. </p>
+            </div>
+            <div class="product">
+                <img src="https://ailla.com/wp-content/uploads/2018/11/ailla_insurance_liofe_37981141_sm.jpg" alt="Life Insurance">
+                <h3>Life Insurance</h3>
+                <p>Life insurance can help take care of your family financially so they won’t be burdened with outstanding expenses when you die. Life insurance pays a specific benefit amount upon your death. You choose the benefit amount and type of AIL policy that is right for your family’s needs and budget. </p>
+            </div>
         </section>
-        <section id="contact">
+        
+        
+        <section id="contact">  
             <h2>Get in Touch</h2>
             <form id="inquiryForm" method="post" action="/submit-form">
                 <label for="firstName">Your Name*</label>
@@ -38,7 +63,7 @@
                 <label for="email">Email*</label>
                 <input type="email" id="email" name="email" required>
     
-                <label>Reason for Contact</label>
+                <label><u>Reason for Contact:</u></label>
                 <div>
                     <input type="checkbox" id="general" name="reasonForContact" value="General">
                     <label for="general">General</label>
@@ -52,7 +77,7 @@
     
                 <div id="policyFields"></div> <!-- Placeholder for additional fields -->
     
-                <label for="message">Message</label>
+                <label for="message"><u>Message:</u></label>
                 <textarea id="message" name="message" required></textarea>
     
                 <div class="g-recaptcha" data-sitekey="6LekCbspAAAAAMAcNojlqvYl0_cDnqOuknWUzHBv"></div> <!-- CAPTCHA Placeholder -->
